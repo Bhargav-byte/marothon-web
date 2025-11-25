@@ -1,3 +1,15 @@
+.partner-icon.ccis-icon {
+    height: 120px !important;
+    max-width: 340px !important;
+}
+.partner-icon.uvxyz-icon {
+    height: 140px !important;
+    max-width: 210px !important;
+}
+.partner-icon.thinkode-icon {
+    height: 160px !important;
+    max-width: 340px !important;
+}
 .event-image-overlay .event-main-title {
     font-family: 'Blackheat', 'Eger', 'Gilroy', 'Inter', sans-serif !important;
     font-size: 50px !important;
@@ -37,11 +49,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #f5f5f5;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+    /* allow normal document flow so sections stack vertically on small screens */
     margin: 0;
+    padding: 0;
 }
 
 /* White Frame Container */
@@ -875,7 +885,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 40px 60px;
+    padding: 40px 0 40px 106px; /* left image now 106px from left edge */
     gap: 60px;
 }
 
@@ -972,6 +982,8 @@ body {
     flex-direction: column;
     gap: 30px;
     align-items: flex-end;
+    margin-left: auto; /* push section to the far right */
+    padding-right: 106px; /* ensure 106px distance from the right edge */
 }
 
 .price-booking-section {
@@ -1032,6 +1044,13 @@ body {
 .map-container iframe {
     width: 100%;
     height: 100%;
+}
+
+.map-container img.event-map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .seventh-header-image {
@@ -1556,37 +1575,45 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    gap: 80px;
 }
 
-.partner-logos-container {
+.partner-icons {
     display: flex;
+    flex-direction: row;
+    gap: 64px;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: flex-start;
+    width: auto;
 }
 
-.partner-logo {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.partner-logo img {
-    max-height: 100%;
-    max-width: 200px;
+.partner-icon {
+    height: 60px;
+    width: auto;
+    max-width: 220px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
+    display: block;
+    filter: grayscale(0.2) contrast(1.1);
+    margin-right: 0;
+    margin-left: 0;
+    box-sizing: content-box;
 }
 
-.partner-logo img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+.partner-icon.eshva-icon {
+    height: 200px !important;
+    max-width: 200px !important;
+}
+
+.brands-text {
+    font-family: 'Blackheat', 'Eger', 'Gilroy', 'Inter', sans-serif;
+    font-size: 60px;
+    line-height: 0.95;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    white-space: nowrap;
 }
 
 .thirteenth-header {
@@ -1906,4 +1933,238 @@ body {
         padding: 30px 20px;
     }
 }
+
+/* ========== Responsive overrides (tablet & mobile friendly) ========== */
+@media (max-width: 1024px) {
+    /* Navigation becomes flexible and centered */
+    .nav-capsule {
+        position: static !important;
+        width: min(92%, 860px) !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 18px auto !important;
+        padding: 10px 14px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+    }
+
+    .nav-item { white-space: nowrap; padding: 8px 12px; font-size: 15px; }
+    .nav-item.active { width: auto; height: auto; padding: 8px 14px; }
+
+    .main-header-line {
+        font-size: clamp(64px, 12vw, 140px) !important;
+        line-height: 1 !important;
+        white-space: normal !important;
+        word-spacing: normal !important;
+    }
+
+    .main-header-text {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        padding: 18px 16px !important;
+        text-align: center !important;
+    }
+
+    .info-cards-container { position: static !important; right: auto !important; top: auto !important; margin: 20px auto !important; display:flex !important; justify-content:center !important; }
+    .info-card, .register-button { width: auto !important; max-width: 340px !important; }
+
+    .eshva-icon-container, .mahesh-babu-icon-container { position: static !important; margin: 12px auto !important; width: auto !important; height: auto !important; display:flex !important; }
+
+    .header-bar { padding: 12px 20px !important; }
+    .header-content { align-items: center !important; gap: 12px !important; }
+
+    .event-info-section { position: static !important; transform: none !important; margin-top: 0 !important; min-width: auto !important; max-width: 100% !important; }
+    .event-image-container { width: 90% !important; max-width: 420px !important; height: auto !important; margin: 0 auto !important; }
+    .map-container { width: 100% !important; max-width: 520px !important; height: auto !important; }
+
+    .fourth-header-content { flex-direction: column !important; align-items: center !important; padding: 20px !important; justify-content: center !important; }
+    .fourth-header-text-wrapper { position: static !important; transform: none !important; left: auto !important; top: auto !important; max-width: 92% !important; padding: 10px !important; }
+
+    .advantages-heading, .sub-header-title, .sixth-header-title, .ninth-header-title, .eleventh-header-title { white-space: normal !important; font-size: clamp(32px, 10vw, 150px) !important; line-height: 1 !important; text-align: center !important; }
+    .advantages-heading-wrapper { gap: 20px !important; left: 0 !important; justify-content: center !important; padding: 0 12px; }
+
+    .fifth-header-content { flex-direction: column !important; transform: none !important; padding: 20px !important; gap: 20px !important; }
+    .advantage-card { width: 90% !important; max-width: 360px !important; margin: 0 auto !important; }
+
+    .contact-form-container { width: 100% !important; max-width: 720px !important; padding: 30px !important; box-sizing: border-box !important; }
+    .contact-details-container { width: 100% !important; max-width: 720px !important; padding: 0 20px !important; box-sizing: border-box !important; }
+
+    .tenth-header-content { flex-direction: column !important; padding: 18px !important; gap: 18px !important; }
+    .footer-main-content { flex-direction: column !important; gap: 24px !important; padding: 20px !important; }
+    .partner-icons { gap: 20px !important; padding-left: 0 !important; justify-content: center !important; }
+    .brands-text { text-align: center !important; margin-top: 12px !important; }
+
+    .scroll-to-top { position: fixed !important; bottom: 20px !important; top: auto !important; right: 20px !important; }
+}
+
+@media (max-width: 768px) {
+    .main-header-line { font-size: clamp(48px, 14vw, 110px) !important; }
+    .sub-header-title { font-size: clamp(36px, 14vw, 110px) !important; }
+
+    .welcome-text, .contact-item, .nav-item { font-size: 13px !important; }
+    .info-card { padding: 16px !important; height: auto !important; }
+
+    .register-button { height: 60px !important; padding: 12px 18px !important; width: 90% !important; max-width: 360px !important; }
+
+    .event-description { margin-top: 20px !important; padding: 0 12px !important; text-align: left !important; }
+    .event-overview-text { position: static !important; padding: 12px !important; margin-top: 10px !important; text-align: left !important; }
+
+    .white-frame { box-shadow: none !important; border-radius: 0 !important; }
+    .header-bar { padding: 10px 14px !important; }
+    .header-middle .contact-info { gap: 10px !important; }
+
+    .feature-card { transform: none !important; margin-right: 0 !important; width: 90% !important; max-width: 360px !important; position: static !important; }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 14px; }
+    .nav-capsule { width: 100% !important; border-radius: 12px !important; padding: 8px !important; }
+    .nav-item { padding: 8px 10px !important; font-size: 13px !important; }
+
+    .main-header-line { font-size: clamp(36px, 18vw, 90px) !important; letter-spacing: 0.02em !important; }
+
+    /* hide large decorative left-aligned text blocks on tiny screens to avoid overflow */
+    .elevate-text, .every-step-text, .get-ready-text, .with-company-text { display: none !important; }
+
+    .fourth-header, .fifth-header, .eighth-header, .seventh-header { padding: 12px !important; }
+    .event-image-container { width: 100% !important; height: auto !important; }
+    .map-container { display: block !important; width: 100% !important; height: auto !important; }
+
+    .contact-form-container { padding: 18px !important; }
+    .contact-details-title, .contact-form-title { font-size: clamp(24px, 8vw, 42px) !important; }
+    .contact-phone { font-size: 34px !important; }
+
+    .footer-column { width: 100% !important; }
+    .brands-text { font-size: 40px !important; }
+}
+
+/* Utility: make images and iframes scale */
+img, picture, video, iframe { max-width: 100%; height: auto; }
+
+/* Ensure large headings can wrap when needed */
+.header .nav-item, .main-header-line, .sub-header-title, .advantages-heading, .card-title, .fourth-header-title, .contact-details-title {
+    word-break: break-word;
+}
+
+/* ------------------ New breakpoints and hamburger nav ------------------ */
+/* Breakpoints: 1200px, 992px, 768px, 576px */
+@media (max-width: 1200px) {
+    /* Slightly reduce massive headings */
+    .main-header-line { font-size: clamp(110px, 9vw, 160px); }
+    .advantages-heading { font-size: clamp(100px, 8.5vw, 140px); }
+    .fourth-header { padding: 30px; }
+}
+
+@media (max-width: 992px) {
+    .main-header-line { font-size: clamp(90px, 10vw, 130px); }
+    .sub-header-title { font-size: clamp(80px, 10vw, 120px); }
+    .info-card { width: 280px; }
+    .event-description { margin-top: 40px; padding: 0 24px; }
+}
+
+@media (max-width: 768px) {
+    /* hamburger button - place inside the header bar (absolute) so it doesn't overlap page edges */
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; background: rgba(34,35,40,1); border: none; color: #fff; width: 50px; height: 50px; border-radius: 8px; position: absolute; top: 50%; left: 16px; transform: translateY(-50%); z-index: 11000; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+    .nav-toggle svg { stroke: #fff; }
+
+    /* make the nav appear as a compact rounded capsule centered near the top */
+    .nav-capsule {
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 360px !important;
+    margin: 18px auto 0 auto !important; /* sits under the header */
+        padding: 8px 14px !important;
+        border-radius: 40px !important;
+        display: none;
+        flex-direction: row !important;
+        gap: 6px !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        z-index: 9999;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .nav-capsule.open { display: flex; }
+    .nav-item { padding: 8px 12px; border-radius: 28px; background: transparent; text-align: center; margin: 4px; min-width: 64px; }
+    .nav-item.active { background: #ff0000 !important; color: #fff !important; }
+
+    /* Reduce large headings and make them wrap nicely */
+    .main-header-line { font-size: clamp(40px, 12vw, 90px) !important; line-height: 1 !important; white-space: normal !important; letter-spacing: 0.02em; }
+    .sub-header-title, .advantages-heading { font-size: clamp(28px, 9vw, 70px) !important; }
+
+    /* Stack hero content and ensure runner image fits */
+    .main-header-text, .info-cards-container, .eshva-icon-container, .mahesh-babu-icon-container { position: relative !important; left: auto !important; right: auto !important; top: auto !important; transform: none !important; text-align: center; }
+    .info-cards-container { display: flex; justify-content: center; padding: 0 12px; }
+    .info-cards-wrapper { flex-direction: column; gap: 12px; align-items: center; }
+
+    /* Ensure cards stack and have space */
+    .info-card, .register-button { width: calc(100% - 48px) !important; max-width: 420px; margin: 0 auto; }
+
+    /* Give header & hero spacing to avoid cards overlapping hero image */
+    .main-header-text { margin-bottom: 18px !important; padding-top: 40px !important; }
+    .info-cards-container { margin-top: 8px !important; }
+
+    /* Reduce paddings, avoid touching edges */
+    .fourth-header, .fifth-header, .seventh-header, .eighth-header, .tenth-header, .thirteenth-header { padding: 18px 14px !important; }
+
+    /* Fix overlaps in overview & advantages sections */
+    .event-overview-text { position: relative !important; top: auto !important; left: auto !important; margin-top: 18px !important; padding: 0 12px; }
+    .event-description { margin-top: 12px !important; text-align: left !important; padding: 0 12px !important; }
+
+    /* Feature card and prize card placed inline on desktop, stack on mobile */
+    .feature-card, .fourth-header-prizes-card, .fourth-header-prizes-card { transform: none !important; margin: 12px auto !important; position: static !important; }
+
+    /* Ensure prize card doesn't cover heading text */
+    .fourth-header-prizes-card { z-index: 3; }
+    .fourth-header-text-wrapper { z-index: 4; }
+
+    /* Seventh header: make image full-width and info flow beneath */
+    .seventh-header-content { flex-direction: column !important; padding: 12px !important; gap: 18px !important; align-items: center !important; }
+    .event-image-container { width: 100% !important; max-width: 720px !important; height: auto !important; }
+    .event-image { width: 100% !important; height: auto !important; object-fit: contain !important; }
+    .event-info-section { position: static !important; transform: none !important; margin-top: 0 !important; max-width: 100% !important; padding: 0 12px !important; }
+
+    /* Contact form stacking */
+    .tenth-header-content { flex-direction: column !important; padding: 12px !important; }
+    .contact-form-container, .contact-details-container { width: 100% !important; max-width: 720px !important; padding: 18px !important; }
+
+    /* Footer stacks vertically */
+    .footer-main-content { flex-direction: column !important; padding: 16px !important; }
+
+    /* Reduce extremely large decorative texts that overlap */
+    .elevate-text, .every-step-text, .get-ready-text, .with-company-text { font-size: clamp(18px, 4vw, 40px) !important; left: 16px !important; transform: none !important; }
+
+    /* Lower the decorative background headings so they don't overlap cards */
+    .advantages-heading, .sub-header-title, .sixth-header-title, .ninth-header-title, .eleventh-header-title { z-index: 1; }
+    .advantage-card, .feature-card, .info-card { z-index: 5; }
+
+    /* Improve typography for small screens */
+    body { font-size: 15px; }
+    h1, h2, h3, .card-title, .contact-details-title { line-height: 1.08; }
+    .card-description, .feature-card-text, .event-description, .info-text { line-height: 1.45; letter-spacing: 0.01em; }
+
+    /* icons and logos responsive */
+    .partner-icon, .partner-icon img, .eshva-icon-container img, .mahesh-babu-icon-container img, .event-image, .eighth-header-image { max-width: 100%; height: auto; }
+}
+
+@media (max-width: 576px) {
+    /* Tighten spacing further on very small phones */
+    .nav-toggle { width: 50px; height: 50px; }
+    .main-header-line { font-size: clamp(28px, 18vw, 72px) !important; }
+    .overview-text, .advantages-heading { font-size: clamp(28px, 16vw, 60px) !important; }
+    .contact-phone { font-size: 30px !important; }
+    .register-button { width: calc(100% - 40px) !important; }
+    .info-card { padding: 14px !important; }
+    .footer-column { padding: 10px 0 !important; }
+    .brands-text { font-size: 32px !important; }
+}
+
+
 

@@ -74,7 +74,16 @@
             </div>
             
             <!-- Navigation Capsule -->
-            <nav class="nav-capsule">
+            <!-- Mobile nav toggle (appears <768px) -->
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav class="nav-capsule" id="main-nav">
                 <a href="#home" class="nav-item active">Home</a>
                 <a href="#about" class="nav-item">About</a>
                 <a href="#rules" class="nav-item">Rules</a>
@@ -273,6 +282,9 @@
                         </div>
                         <button class="book-now-btn">BOOK NOW</button>
                     </div>
+                    <div class="map-container">
+                        <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/Photos/map.png" alt="Event Route Map" class="event-map-image" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -390,12 +402,13 @@
         <!-- Twelfth Header Section -->
         <section class="twelfth-header">
             <div class="twelfth-header-content">
-                <div class="partner-logos-container">
-                    <div class="partner-logo" id="partner-logo-1"></div>
-                    <div class="partner-logo" id="partner-logo-2"></div>
-                    <div class="partner-logo" id="partner-logo-3"></div>
-                    <div class="partner-logo" id="partner-logo-4"></div>
+                <div class="partner-icons">
+                    <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/thinkode_logo.png" alt="Thinkode Logo" class="partner-icon thinkode-icon" />
+                    <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/CCIS.png" alt="CCIS Logo" class="partner-icon ccis-icon" />
+                    <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/eshva%20gray.png" alt="Eshva Gray Logo" class="partner-icon eshva-icon" />
+                    <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/UVXYZ.png" alt="UVXYZ Logo" class="partner-icon uvxyz-icon" />
                 </div>
+                <div class="brands-text" aria-label="We work with best brands">WE WORK WITH BEST<br>BRANDS</div>
             </div>
         </section>
 
@@ -476,6 +489,26 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="config.js"></script>
     <script src="app.js"></script>
+    <!-- Small accessible nav toggle script (no external deps) -->
+    <script>
+        (function(){
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('main-nav');
+            if (!toggle || !nav) return;
+            toggle.addEventListener('click', function(){
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                nav.classList.toggle('open');
+            });
+            // Close nav when clicking outside on small screens
+            document.addEventListener('click', function(e){
+                if (!nav.classList.contains('open')) return;
+                if (e.target.closest('#main-nav') || e.target.closest('.nav-toggle')) return;
+                nav.classList.remove('open');
+                toggle.setAttribute('aria-expanded','false');
+            });
+        })();
+    </script>
 </body>
 </html>
 

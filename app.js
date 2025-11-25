@@ -42,9 +42,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Fetch feature card icon
         await fetchFeatureCardIcon();
         
-        // Fetch partner logos
-        await fetchPartnerLogos();
-        
         // Initialize amenities interactive content
         initAmenitiesInteractive();
         
@@ -343,6 +340,38 @@ function initNavigationCapsule() {
         });
     });
 }
+
+// Mobile nav toggle behavior
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (navToggle && mobileNav) {
+        navToggle.addEventListener('click', (e) => {
+            const isOpen = mobileNav.classList.toggle('open');
+            mobileNav.setAttribute('aria-hidden', String(!isOpen));
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close mobile nav when clicking an item
+        mobileNav.querySelectorAll('.mobile-nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+                mobileNav.setAttribute('aria-hidden', 'true');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!mobileNav.classList.contains('open')) return;
+            if (e.target === navToggle || mobileNav.contains(e.target)) return;
+            mobileNav.classList.remove('open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    }
+});
 
 /**
  * Fetch header image from Supabase storage
@@ -822,32 +851,6 @@ async function fetchFeatureCardIcon() {
         }
     } catch (error) {
         console.error('Error in fetchFeatureCardIcon:', error);
-    }
-}
-
-async function fetchPartnerLogos() {
-    try {
-        const partnerLogos = [
-            { id: 'partner-logo-1', url: 'https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/thinkode_logo.png', alt: 'Thinkode Logo' },
-            { id: 'partner-logo-2', url: 'https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/thinkode_logo.png', alt: 'Thinkode Logo' },
-            { id: 'partner-logo-3', url: 'https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/UVXYZ.png', alt: 'UVXYZ Logo' },
-            { id: 'partner-logo-4', url: 'https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/icons/eshva%20gray.png', alt: 'Eshva Logo' }
-        ];
-        
-        partnerLogos.forEach(logo => {
-            const container = document.getElementById(logo.id);
-            if (container) {
-                const img = document.createElement('img');
-                img.src = logo.url;
-                img.alt = logo.alt;
-                container.innerHTML = '';
-                container.appendChild(img);
-            }
-        });
-        
-        console.log('Partner logos loaded successfully');
-    } catch (error) {
-        console.error('Error in fetchPartnerLogos:', error);
     }
 }
 
