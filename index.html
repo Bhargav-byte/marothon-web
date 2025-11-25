@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Big+Shoulders+Display:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- White Frame Container -->
+    <div class="white-frame">
+        <!-- Header Section -->
+        <header class="header" id="header">
+            <!-- Header Bar (Dark Grey Bar on top of image) -->
+            <div class="header-bar">
+                <div class="header-content">
+                <!-- Left Side -->
+                <div class="header-left">
+                    <span class="welcome-text">Welcome to MAHESHBABU FOUNDATION Marathon 2025</span>
+                </div>
+                
+                <!-- Middle Section -->
+                <div class="header-middle">
+                    <div class="contact-info">
+                        <span class="contact-item">
+                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            +91 99999 99999
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            info@mbfm.in
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Gachibowli, Hyderabad.
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Right Side -->
+                <div class="header-right">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Capsule -->
+            <nav class="nav-capsule">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#rules" class="nav-item">Rules</a>
+                <a href="#result" class="nav-item">Result</a>
+                <a href="#media" class="nav-item">Media</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            
+            <!-- Mahesh Babu Icon -->
+            <div class="mahesh-babu-icon-container" id="mahesh-babu-icon">
+                <!-- Icon will be loaded from Supabase -->
+            </div>
+            
+            <!-- Main Header Text -->
+            <div class="main-header-text">
+                <div class="main-header-line">RUN WITH PURPOSE FINISH WITH PRIDE</div>
+            </div>
+            
+            <!-- Info Cards Section -->
+            <div class="info-cards-container">
+                <div class="info-cards-wrapper">
+                    <div class="info-card">
+                        <div class="info-row">
+                            <div class="info-left">
+                                <div class="info-icon" id="distance-icon">
+                                    <!-- Icon will be loaded from Supabase -->
+                                </div>
+                                <div class="info-label">Distance</div>
+                            </div>
+                            <div class="info-value">3km</div>
+                        </div>
+                        <div class="info-divider"></div>
+                        
+                        <div class="info-row">
+                            <div class="info-left">
+                                <div class="info-icon" id="location-icon">
+                                    <!-- Icon will be loaded from Supabase -->
+                                </div>
+                                <div class="info-label">Location</div>
+                            </div>
+                            <div class="info-value">Yousufgude Police<br>Grounds,<br>Hyderabad</div>
+                        </div>
+                        <div class="info-divider"></div>
+                        
+                        <div class="info-row">
+                            <div class="info-left">
+                                <div class="info-icon" id="date-icon">
+                                    <!-- Icon will be loaded from Supabase -->
+                                </div>
+                                <div class="info-label">Date</div>
+                            </div>
+                            <div class="info-value">21-02-2026</div>
+                        </div>
+                    </div>
+                    
+                    <button class="register-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                        <span>Register</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Eshva Icon -->
+            <div class="eshva-icon-container" id="eshva-icon">
+                <!-- Icon will be loaded from Supabase -->
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="event-overview-text">
+                    <div class="event-text">EVENT</div>
+                    <div class="overview-text">OVERVIEW</div>
+                    <div class="event-description">
+                        <div class="event-description-line1">Run for little hearts! Join us for a 3K run to support treatment for children born with congenital heart conditions, organized by the Mahesh Babu Foundation with Eshva Celebrations Pvt. Ltd</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Third Header Section -->
+        <section class="sub-header">
+            <div class="sub-header-content">
+                <span class="elevate-text">ELEVATE YOUR RUN</span>
+                <span class="sub-header-title" data-text="OVERCOME NEW DISTAN" aria-hidden="true">OVERCOME NEW DISTAN</span>
+            </div>
+        </section>
+
+        <!-- Fourth Header Section -->
+        <section class="fourth-header" id="fourth-header">
+            <div class="fourth-header-content">
+                <div class="fourth-header-prizes-card">
+                    <div class="prizes-title">PRIZES FOR RUNNER</div>
+                    <div class="prizes-desc">Sprint. Finish. Celebrate.</div>
+                </div>
+                <div class="fourth-header-text-wrapper">
+                    <div class="fourth-header-subtitle">OVERCOME NEW DISTANCES</div>
+                    <div class="fourth-header-title">
+                        <span class="title-line">POWERED BY PURPOSE: ESHVA X</span>
+                        <span class="title-line">MAHESH BABU FOUNDATION 3K RUNS</span>
+                    </div>
+                    <p class="fourth-header-description">Together, we run to support children born with congenital heart ailments. This 3K Run, organized in collaboration with Eshva Celebrations and the Mahesh Babu Foundation, aims to raise awareness and strengthen access to life-saving heart treatments. Lace up, run with purpose, and help us create healthier futures for little hearts.</p>
+                    <button class="fourth-header-register-btn">REGISTER NOW</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fifth Header Section -->
+        <section class="fifth-header" id="fifth-header">
+            <div class="advantages-heading-wrapper">
+                <h2 class="advantages-heading"><span class="our-text">OUR</span> ADVANTAGES</h2>
+                <h2 class="advantages-heading"><span class="our-text">OUR</span> ADVANTAGES</h2>
+                <h2 class="advantages-heading"><span class="our-text">OUR</span> ADVANTAGES</h2>
+                <h2 class="advantages-heading"><span class="our-text">OUR</span> ADVANTAGES</h2>
+            </div>
+            <div class="fifth-header-content">
+                <div class="advantage-card">
+                    <div class="card-icon-space" id="certificate-medal-icon"></div>
+                    <h3 class="card-title">CERTIFICATE <span class="card-ampersand">&</span> MEDALS</h3>
+                    <p class="card-description">Cross the finish line, flex your medal! Every finisher gets certified bragging rights.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="card-icon-space" id="water-bottle-icon"></div>
+                    <h3 class="card-title">WATER BOTTLE</h3>
+                    <p class="card-description">Stay hydrated, stay unstoppable. Grab your exclusive runner bottle and keep the hustle on.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="card-icon-space" id="tshirt-icon"></div>
+                    <h3 class="card-title">T-SHIRT</h3>
+                    <p class="card-description">Run with pride in our official 3K Run T-shirt, supporting little hearts with every step.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="card-icon-space" id="goodies-bag-icon"></div>
+                    <h3 class="card-title">GOODIES' BAG</h3>
+                    <p class="card-description">Take home a bag full of exciting goodies as a token of appreciation for running for a cause.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sixth Header Section -->
+        <section class="sixth-header">
+            <div class="sixth-header-content">
+                <span class="every-step-text">Every Step Counts. Every Mile Matters.</span>
+                <span class="sixth-header-title">EVENT SCHEDULING</span>
+            </div>
+        </section>
+
+        <!-- Seventh Header Section -->
+        <section class="seventh-header" id="seventh-header">
+            <div class="seventh-header-content">
+                <div class="event-image-container">
+                    <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/Photos/5.png" alt="3K Run Event" class="event-image">
+                    <div class="event-image-overlay">
+                        <h2 class="event-main-title">3K RUN</h2>
+                        <p class="event-tagline">Go the extra mile. Run for little hearts.</p>
+                    </div>
+                </div>
+                <div class="event-info-section">
+                                        <h2 class="event-main-title event-info-title">3K RUN</h2>
+                    <div class="info-block">
+                        <div class="icon-space"></div>
+                        <div class="info-content">
+                            <h3 class="info-heading">DETAILS</h3>
+                            <p class="info-text">Start : Feb 21 2026 06:00AM</p>
+                            <p class="info-text">End : Feb 21 2026 10:00AM</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="icon-space"></div>
+                        <div class="info-content">
+                            <h3 class="info-heading">ORGANIZER</h3>
+                            <p class="info-text">Eshva Event Planner</p>
+                            <p class="info-text">Phone : +91 99999 99999</p>
+                            <p class="info-text">Email : Info@eshva.com</p>
+                            <p class="info-text">Web: www.eshva.com</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="icon-space"></div>
+                        <div class="info-content">
+                            <h3 class="info-heading">VENUE</h3>
+                            <p class="info-text">Yousufguda Police Grounds,<br>Hyderabad,Telangana -500084,<br>india</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-right-section">
+                    <div class="price-booking-section">
+                        <div class="price-container">
+                            <span class="price-label">Cost : Rs</span>
+                            <span class="price-amount">1999.00</span>
+                        </div>
+                        <button class="book-now-btn">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eighth Header Section -->
+        <section class="eighth-header" id="eighth-header">
+            <div class="eighth-header-content">
+                <div class="eighth-header-left">
+                    <h2 class="amenities-title">AMENITIES</h2>
+                    <p class="amenities-description">From hydration points to medical aid and cheering zones, every step of your run is powered with full support. Just show up, hustle hard, and we’ve got the rest covered.</p>
+                    <div class="quick-registration-wrapper">
+                        <h3 class="quick-registration-title amenities-list-item" data-amenity="registration">QUICK REGISTRATION</h3>
+                        <span class="quick-registration-accent"></span>
+                    </div>
+                    <ul class="amenities-list">
+                        <li class="amenities-list-item" data-amenity="medical">MEDICAL PERSSONEL</li>
+                        <li class="amenities-list-item" data-amenity="drink">DRINK STATIONS</li>
+                        <li class="amenities-list-item" data-amenity="toilets">COMFORTABLE TOILETS</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon" id="feature-card-icon">
+                    </div>
+                        <p class="feature-card-text">Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and next and pled</p>
+                    <div class="feature-card-dots"><span></span><span></span><span></span></div>
+                </div>
+                <img src="https://fbietamqdnxlmatcwpvr.supabase.co/storage/v1/object/public/Photos/6.png" alt="Eighth Header Image" class="eighth-header-image" id="amenity-image">
+            </div>
+        </section>
+
+        <!-- Ninth Header Section (same as sixth header but new background color) -->
+        <section class="ninth-header">
+            <div class="ninth-header-content">
+                <span class="get-ready-text">GET READY</span>
+                <span class="ninth-header-title">READY MARATHON<span class="ninth-header-question">?</span></span>
+            </div>
+        </section>
+
+        <!-- Tenth Header Section -->
+        <section class="tenth-header">
+            <div class="tenth-header-content">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="contact-form-title">CONTACT FORM</h2>
+                    
+                    <div class="form-field">
+                        <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input type="text" placeholder="Name" class="form-input">
+                    </div>
+                    
+                    <div class="form-field">
+                        <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input type="email" placeholder="Email" class="form-input">
+                    </div>
+                    
+                    <div class="form-field">
+                        <svg class="form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                        <input type="text" placeholder="How can we help you? Feel free to get in touch" class="form-input form-input-large">
+                    </div>
+                    
+                    <button class="get-in-touch-btn">GET IN TOUCH</button>
+                </div>
+                
+                <!-- Right Column: Contact Details -->
+                <div class="contact-details-container">
+                    <p class="contact-us-label">CONTACT US</p>
+                    <h2 class="contact-details-title">HAVE QUESTIONS?<br>GET IN TOUCH</h2>
+                    
+                    <div class="contact-info-block">
+                        <p class="contact-detail-text">Gachibowli, Hyderabad.</p>
+                        <p class="contact-detail-text">Telangana -500084, India</p>
+                        <p class="contact-detail-text">Email : Info@eshva.com</p>
+                        <p class="contact-detail-text">Web: www.eshva.com</p>
+                    </div>
+                    
+                    <p class="contact-phone">+91 99999 99999</p>
+                    
+                    <div class="social-icons-row">
+                        <a href="#" class="social-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eleventh Header Section (same as sixth header but with #54D7F8 color) -->
+        <section class="eleventh-header">
+            <div class="eleventh-header-content">
+                <span class="with-company-text">With company, miles become moments</span>
+                <span class="eleventh-header-title">OUR PARTNERS</span>
+            </div>
+        </section>
+
+        <!-- Twelfth Header Section -->
+        <section class="twelfth-header">
+            <div class="twelfth-header-content">
+                <div class="partner-logos-container">
+                    <div class="partner-logo" id="partner-logo-1"></div>
+                    <div class="partner-logo" id="partner-logo-2"></div>
+                    <div class="partner-logo" id="partner-logo-3"></div>
+                    <div class="partner-logo" id="partner-logo-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thirteenth Header Section / Footer -->
+        <section class="thirteenth-header">
+            <div class="thirteenth-header-content">
+                <!-- Footer Content -->
+                <div class="footer-main-content">
+                    <!-- Column 1: Logo & Description -->
+                    <div class="footer-column footer-logo-column">
+                        <div class="footer-logo" id="footer-mahesh-babu-logo">
+                        </div>
+                        <p class="footer-description">
+                            The ESHVA × Mahesh Babu Foundation Marathon is a charity initiative supporting Andhra Hospitals Children's Care.
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">QUICK LINKS</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Rules</a></li>
+                            <li><a href="#">Results</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Get In Touch -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">GET IN TOUCH</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Office -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">OFFICE</h3>
+                        <div class="footer-links">
+                            <p>Andhra Hospitals, Vijayawada,<br>Andhra Pradesh</p>
+                            <p>+91 99999 99999</p>
+                            <p>info@mbfoundations.com</p>
+                            <p>www.eshvaevents.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Separator Line -->
+                <div class="footer-separator"></div>
+
+                <!-- Footer Bottom Section -->
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        © 2025 ESHVA Events × Mahesh Babu Foundation
+                    </div>
+                    <div class="footer-legal">
+                        Privacy Policies | Razor Pay | Terms and Conditions
+                    </div>
+                </div>
+
+                <!-- Scroll to Top Button -->
+                <a href="#header" class="scroll-to-top">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

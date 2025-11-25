@@ -1,0 +1,23 @@
+{
+  "name": "marathon-web",
+  "version": "1.0.0",
+  "description": "Website with white frame layout and Supabase integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -l 3000",
+    "web": "npx serve ."
+  },
+  "keywords": [
+    "website",
+    "supabase",
+    "marathon"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "otf2ttf": "^1.1.2",
+    "ttf2woff2": "^8.0.0"
+  }
+}
